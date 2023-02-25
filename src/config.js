@@ -190,7 +190,7 @@ var config = {
 		{	
 			group: 'OSM',
 			title: 'Límits municipals',
-			query: '(nwr["admin_level"="8"]({{bbox}});node(w););out meta;',
+			query: '(r["admin_level"="8"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
@@ -206,7 +206,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/base/circle.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -232,14 +232,14 @@ query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
-				var key_regex = /^name$/
+				var key_regex = /^NOMMUNI$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
 					color: 'rgba(255,0,0,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba(255,0,0,1)',
+					color: 'rgba( 69, 179, 157 ,1)',
 					width: 1
 				});
 				var style = new ol.style.Style({
@@ -298,12 +298,11 @@ style: function (feature) {
 					'NOMMUNI': {
 						'.*': new ol.style.Style({
 							stroke: new ol.style.Stroke({
-								color: 'rgba(255, 255, 255, 1.0)',
-								width: 3
+								color: 'rgba(255, 0, 0, 1.0)',
+								width: 1
 							}),
 							text: new ol.style.Text({
-								text: name,
-								placement: 'line'
+								text: name
 							})
 						})
 					},
