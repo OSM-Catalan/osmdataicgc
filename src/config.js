@@ -226,6 +226,120 @@ style: function (feature) {
 			
 		{	
 			group: 'ICGC',
+			title: 'Límits municipals Barcelona',
+geojson:  imgSrc + 'json/municipis_icgc_bcn.geojson',
+query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
+			iconSrc:  imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^NOMMUNI$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba( 69, 179, 157 ,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'base/circle.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+				},
+			
+		{	
+			group: 'ICGC',
+			title: 'Límits municipals Girona',
+geojson:  imgSrc + 'json/municipis_icgc_gir.geojson',
+query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
+			iconSrc:  imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^NOMMUNI$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba( 69, 179, 157 ,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'base/circle.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+				},
+			
+		{	
+			group: 'ICGC',
+			title: 'Límits municipals Lleida',
+geojson:  imgSrc + 'json/municipis_icgc_lld.geojson',
+query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
+			iconSrc:  imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+style: function (feature) {
+				var key_regex = /^NOMMUNI$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(255,0,0,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba( 69, 179, 157 ,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'base/circle.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+				},
+			
+		{	
+			group: 'ICGC',
 			title: 'Límits municipals Tarragona',
 geojson:  imgSrc + 'json/municipis_icgc_tgn.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
