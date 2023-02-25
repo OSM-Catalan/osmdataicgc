@@ -227,8 +227,9 @@ style: function (feature) {
 		{	
 			group: 'ICGC',
 			title: 'Límits municipals Tarragona',
-geojson: 'https://raw.githubusercontent.com/yopaseopor/osmdataicgc/main/src/municipis_icgc_tgn.geojson',
-			iconSrc:  imgSrc + 'icones/circle.svg',
+geojson:  imgSrc + 'json/municipis_icgc_tgn.geojson',
+query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
+			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -243,7 +244,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/maxspeed_empty.svg',
+							src: imgSrc + 'icones/base/circle.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -259,7 +260,79 @@ style: function (feature) {
 				});
 				return style;
 			}
-				},
+},
+		{
+			group: 'ICGC',
+			title: 'Límits municipals Tarragona2',
+			geojson:  imgSrc + 'json/municipis_icgc_tgn.geojson',
+			iconSrc: imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:#D00B67',
+			style: function (feature) {
+				var key_regex = /^building:2021-09-19$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var styles = {
+					'amenity:2021-09-19': {
+						'parking': new ol.style.Style({
+							stroke: new ol.style.Stroke({
+								color: 'rgba(170, 170, 170, 1.0)',
+								width: 1
+							}),
+							fill: new ol.style.Fill({
+								color: 'rgba(170, 170, 170, 0.3)'
+							})
+						})
+					},
+					'building:2021-09-19': {
+						'.*': new ol.style.Style({
+							zIndex: 100,
+							stroke: new ol.style.Stroke({
+								color: 'rgba(160, 82, 45, 1.0)',
+								width: 1
+							}),
+							fill: new ol.style.Fill({
+								color: 'rgba(210, 105, 30, 0.3)'
+							})
+						
+					},
+					'NOMMUNI': {
+						'.*': new ol.style.Style({
+							stroke: new ol.style.Stroke({
+								color: 'rgba(255, 255, 255, 1.0)',
+								width: 3
+							}),
+							text: new ol.style.Text({
+								text: name,
+								placement: 'line'
+							})
+						})
+					},
+					'natural': {
+						'tree': new ol.style.Style({
+							image: new ol.style.Circle({
+								radius: 2,
+								fill: new ol.style.Fill({
+									color: 'rgba(140, 208, 95, 1.0)'
+								}),
+								stroke: null
+							})
+						})
+					}
+				};
+				for (var key in styles) {
+					var value = feature.get(key);
+					if (value !== undefined) {
+						for (var regexp in styles[key]) {
+							if (new RegExp(regexp).test(value)) {
+								return styles[key][regexp];
+							}
+						}
+					}
+				}
+				return null;
+			} 
+		 
+		},
 			
 		{
 			group: 'Marcas & Economía',
