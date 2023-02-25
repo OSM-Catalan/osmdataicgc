@@ -293,7 +293,7 @@ style: function (feature) {
 							fill: new ol.style.Fill({
 								color: 'rgba(210, 105, 30, 0.3)'
 							})
-						
+						})	
 					},
 					'NOMMUNI': {
 						'.*': new ol.style.Style({
