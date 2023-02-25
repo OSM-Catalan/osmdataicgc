@@ -190,8 +190,8 @@ var config = {
 		{	
 			group: 'OSM',
 			title: 'Límits municipals',
-			query: '(nwr["admin_level"="8"]({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'icones/base/circle.svg',
+			query: '(r["admin_level"="8"]({{bbox}});node(w););out meta;',
+			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -206,7 +206,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/base/circle.svg',
+							src: imgSrc + 'base/circle.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
@@ -244,7 +244,7 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: imgSrc + 'icones/base/circle.svg',
+							src: imgSrc + 'base/circle.svg',
 							scale:0.03
 						}),
 							text: new ol.style.Text({
