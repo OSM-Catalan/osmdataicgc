@@ -146,7 +146,7 @@ var config = {
 			source: new ol.source.TileWMS({
 				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
 				url: '/servei/catalunya/divisions-administratives/wms?',
-				params: {'LAYERS': 'divisions_administratives_comarques_5000', 'VERSION': '1.3.0'}
+				params: {'LAYERS': 'divisions_administratives_municipis_5000', 'VERSION': '1.3.0'}
 			}),
 			visible: false
 
