@@ -230,7 +230,7 @@ style: function (feature) {
 geojson:  imgSrc + 'json/municipis_icgc_bcn.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconStyle: 'background-color:rgba( 69, 179, 157 ,0.4)',
 style: function (feature) {
 				var key_regex = /^NOMMUNI$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -268,7 +268,7 @@ style: function (feature) {
 geojson:  imgSrc + 'json/municipis_icgc_gir.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconStyle: 'background-color:rgba( 241, 148, 138 ,0.4)',
 style: function (feature) {
 				var key_regex = /^NOMMUNI$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -277,7 +277,7 @@ style: function (feature) {
 					color: 'rgba(255,0,0,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba( 69, 179, 157 ,1)',
+					color: 'rgba(  241, 148, 138  ,1)',
 					width: 1
 				});
 				var style = new ol.style.Style({
@@ -306,7 +306,7 @@ style: function (feature) {
 geojson:  imgSrc + 'json/municipis_icgc_lld.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconStyle: 'background-color:rgba( 165, 105, 189 ,0.4)',
 style: function (feature) {
 				var key_regex = /^NOMMUNI$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -315,7 +315,7 @@ style: function (feature) {
 					color: 'rgba(255,0,0,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba( 69, 179, 157 ,1)',
+					color: 'rgba( 165, 105, 189 ,1)',
 					width: 1
 				});
 				var style = new ol.style.Style({
@@ -344,7 +344,7 @@ style: function (feature) {
 geojson:  imgSrc + 'json/municipis_icgc_tgn.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconStyle: 'background-color:rgba(245, 176, 65,0.4)',
 style: function (feature) {
 				var key_regex = /^NOMMUNI$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -353,7 +353,7 @@ style: function (feature) {
 					color: 'rgba(255,0,0,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba( 69, 179, 157 ,1)',
+					color: 'rgba(245, 176, 65 ,1)',
 					width: 1
 				});
 				var style = new ol.style.Style({
