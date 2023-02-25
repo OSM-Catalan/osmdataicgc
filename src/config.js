@@ -191,7 +191,7 @@ var config = {
 			group: 'OSM',
 			title: 'Límits municipals',
 			query: '(r["admin_level"="8"]({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'icones/maxspeed_empty.svg',
+			iconSrc:  imgSrc + 'icones/base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
