@@ -129,12 +129,24 @@ var config = {
 		}),
 		
 				new ol.layer.Tile({
-			title: 'ES_CAT_ICGC - Actual',
+			title: 'ES_CAT_ICGC - Ortofoto Actual',
 			iconSrc: imgSrc + 'logo_icgc.png',
 			source: new ol.source.TileWMS({
 				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
 				url: 'https://geoserveis.icgc.cat/icc_mapesbase/wms/service?',
 				params: {'LAYERS': 'orto25c', 'VERSION': '1.1.1'}
+			}),
+			visible: false
+
+		}),
+		
+				new ol.layer.Tile({
+			title: 'ES_CAT_ICGC - Divisions administratives',
+			iconSrc: imgSrc + 'logo_icgc.png',
+			source: new ol.source.TileWMS({
+				attributions: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap Contributors</a>,Tiles &copy; ICGC &mdash; Source: ICGC',
+				url: '/servei/catalunya/divisions-administratives/wms?',
+				params: {'LAYERS': 'divisions_administratives_comarques_5000', 'VERSION': '1.3.0'}
 			}),
 			visible: false
 
@@ -212,11 +224,11 @@ style: function (feature) {
 			}
 				},
 			
-		{
-			group: 'Marcas & Restauración',
-			title: 'Burger King',
-			query: '(nwr["brand:wikidata"="Q177054"]({{bbox}});node(w););out meta;',
-			iconSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/220px-Burger_King_2020.svg.png',
+		{	
+			group: 'ICGC',
+			title: 'Límits municipals',
+geojson: 'https://raw.githubusercontent.com/yopaseopor/osmdataicgc/main/src/municipis_icgc.geojson',
+			iconSrc: 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -231,8 +243,8 @@ style: function (feature) {
 				});
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
-							src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/220px-Burger_King_2020.svg.png',
-							scale:0.10
+							src: imgSrc + 'icones/maxspeed_empty.svg',
+							scale:0.03
 						}),
 							text: new ol.style.Text({
 								text: name,
@@ -247,7 +259,6 @@ style: function (feature) {
 				});
 				return style;
 			}
-
 				},
 			
 		{
