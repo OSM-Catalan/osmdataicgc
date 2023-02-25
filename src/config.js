@@ -191,7 +191,7 @@ var config = {
 			group: 'OSM',
 			title: 'Límits municipals',
 			query: '(nwr["admin_level"="8"]({{bbox}});node(w););out meta;',
-			iconSrc: 'icones/maxspeed_empty.svg',
+			iconSrc:  imgSrc + 'icones/maxspeed_empty.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -226,9 +226,9 @@ style: function (feature) {
 			
 		{	
 			group: 'ICGC',
-			title: 'Límits municipals',
-geojson: 'https://raw.githubusercontent.com/yopaseopor/osmdataicgc/main/src/municipis_icgc.geojson',
-			iconSrc: 'icones/maxspeed_empty.svg',
+			title: 'Límits municipals Tarragona',
+geojson: 'https://raw.githubusercontent.com/yopaseopor/osmdataicgc/main/src/municipis_icgc_tgn.geojson',
+			iconSrc:  imgSrc + 'icones/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
