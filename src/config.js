@@ -227,7 +227,7 @@ style: function (feature) {
 		{	
 			group: 'OSM',
 			title: 'Amb nom',
-			query: '(nwr["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
+			query: '(nwr[name]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
