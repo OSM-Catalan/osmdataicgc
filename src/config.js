@@ -225,7 +225,7 @@ style: function (feature) {
 				},
 			
 		{	
-			group: 'ICGC',
+			group: 'Test',
 			title: 'Nomenclàtor ICGC 2020',
 geojson:  imgSrc + 'json/icgc_nomenclator_2020_def.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
