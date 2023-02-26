@@ -222,44 +222,7 @@ style: function (feature) {
 				});
 				return style;
 			}
-				},
-			
-		{	
-			group: 'ICGC',
-			title: 'Nomenclàtor ICGC 2020',
-geojson:  imgSrc + 'json/icgc_nomenclator_2020_def.geojson',
-query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba( 69, 179, 157 ,0.4)',
-style: function (feature) {
-				var key_regex = /^Topònim$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
-				});
-				var stroke = new ol.style.Stroke({
-					color: 'rgba( 69, 179, 157 ,1)',
-					width: 1
-				});
-				var style = new ol.style.Style({
-					image: new ol.style.Icon({
-							src: imgSrc + 'base/circle.svg',
-							scale:0.03
-						}),
-							text: new ol.style.Text({
-								text: name,
-								offsetX : 7,
-								offsetY : -12,
-								fill: new ol.style.Fill({
-                            color: 'rgba(0,0,0,1)'
-                        }),
-						}),
-					fill: fill,
-					stroke: stroke
-				});
-				return style;
-			}
+
 				},
 			
 		{	
