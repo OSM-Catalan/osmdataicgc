@@ -281,7 +281,7 @@ style: function (feature) {
 				var style = new ol.style.Style({
 					image: new ol.style.Icon({
 							src: imgSrc + 'base/circle.svg',
-							scale:1
+							scale:0.10
 						}),
 							text: new ol.style.Text({
 								text: name,
