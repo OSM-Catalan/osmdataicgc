@@ -511,7 +511,7 @@ style: function (feature) {
 				//OSM POIs Map
 		show2.append($('<a>').css('marginLeft', 5).attr({title: 'OSM POIs Map', href: 'https://yopaseopor.github.io/osmpoismap/#map=' + Math.min(view.getZoom(), 18) + '/' + coordinateLL[1] + '/' + coordinateLL[0] + '&view=tagging', target: '_blank'}).html($('<img>').attr({src: imgSrc + 'osmpoismap_logo.svg', height: 20, width: 20})));
 		
-					return $.merge($.merge($.merge($.merge($.merge(open, show), show2), tool), edit);
+					return $.merge($.merge($.merge($.merge($.merge(open, show), show2), tool), complete), edit);
 	},
 
 	//Es crida per cada element trobat al fer click
