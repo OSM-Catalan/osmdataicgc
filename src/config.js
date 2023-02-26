@@ -190,7 +190,7 @@ var config = {
 		{	
 			group: 'OSM',
 			title: 'Límits municipals',
-			query: '(relation["admin_level"="8"]({{bbox}}););out meta;',
+			query: '(relation["admin_level"="8"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
