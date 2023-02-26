@@ -225,7 +225,7 @@ style: function (feature) {
 				},
 			
 		{	
-			group: 'Test',
+			group: 'ICGC',
 			title: 'Nomenclàtor ICGC 2020',
 geojson:  imgSrc + 'json/icgc_nomenclator_2020_def.geojson',
 query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
@@ -374,78 +374,7 @@ style: function (feature) {
 				});
 				return style;
 			}
-},
-		{
-			group: 'ICGC',
-			title: 'Nomenclàtor ICGC 2020',
-geojson:  imgSrc + 'json/icgc_nomenclator_2020_def.geojson',
-			iconSrc: imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:#D00B67',
-			style: function (feature) {
-				var key_regex = /^Topònim$/
-				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
-				var name = feature.get(name_key) || '';
-				var styles = {
-					'amenity:2021-09-19': {
-						'parking': new ol.style.Style({
-							stroke: new ol.style.Stroke({
-								color: 'rgba(170, 170, 170, 1.0)',
-								width: 1
-							}),
-							fill: new ol.style.Fill({
-								color: 'rgba(170, 170, 170, 0.3)'
-							})
-						})
-					},
-					'building:2021-09-19': {
-						'.*': new ol.style.Style({
-							zIndex: 100,
-							stroke: new ol.style.Stroke({
-								color: 'rgba(160, 82, 45, 1.0)',
-								width: 1
-							}),
-							fill: new ol.style.Fill({
-								color: 'rgba(210, 105, 30, 0.3)'
-							})
-						})	
-					},
-					'Topònim': {
-						'.*': new ol.style.Style({
-							stroke: new ol.style.Stroke({
-								color: 'rgba(255, 0, 0, 1.0)',
-								width: 1
-							}),
-							text: new ol.style.Text({
-								text: name
-							})
-						})
-					},
-					'natural': {
-						'tree': new ol.style.Style({
-							image: new ol.style.Circle({
-								radius: 2,
-								fill: new ol.style.Fill({
-									color: 'rgba(140, 208, 95, 1.0)'
-								}),
-								stroke: null
-							})
-						})
-					}
-				};
-				for (var key in styles) {
-					var value = feature.get(key);
-					if (value !== undefined) {
-						for (var regexp in styles[key]) {
-							if (new RegExp(regexp).test(value)) {
-								return styles[key][regexp];
-							}
-						}
-					}
-				}
-				return null;
-			} 
-		 
-		},
+				},
 			
 		{	
 			group: 'ICGC',
