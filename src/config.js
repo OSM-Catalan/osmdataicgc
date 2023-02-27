@@ -301,7 +301,7 @@ style: function (feature) {
 		{	
 			group: 'OSM',
 			title: 'Amb nom (via)',
-			query: '(way["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
+			query: '(way["name"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
 style: function (feature) {
