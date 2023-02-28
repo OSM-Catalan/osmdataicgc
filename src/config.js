@@ -376,9 +376,8 @@ style: function (feature) {
 			group: 'Altres entitats',
 			title: 'Límits municipals IGN',
 geojson:  imgSrc + 'json/municipis_ign.json',
-query: '(nwr["NOMMUNI"="*"]({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba( 69, 179, 157 ,0.4)',
+			iconStyle: 'background-color:rgba(34, 59, 153 ,0.4)',
 style: function (feature) {
 				var key_regex = /^NAME_BOUND$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -387,7 +386,7 @@ style: function (feature) {
 					color: 'rgba(255,0,0,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba( 69, 179, 157 ,1)',
+					color: 'rgba(34, 59, 153 ,1)',
 					width: 1
 				});
 				var style = new ol.style.Style({
@@ -712,7 +711,7 @@ style: function (feature) {
 				
 		{	
 			group: 'Test',
-			title: 'Amb nom (node)',
+			title: 'Amb nom (nwr)',
 			query: '(nwr["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(255,255,255,0.4)',
