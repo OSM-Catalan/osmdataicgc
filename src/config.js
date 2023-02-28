@@ -265,7 +265,7 @@ style: function (feature) {
 			group: 'OSM',
 			title: 'Amb nom (via)',
 			query: '(way["name"]({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'base/line.gif',
+			iconSrc:  imgSrc + 'base/line.png',
 			iconStyle: 'background-color:rgba(255,0,0,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -302,7 +302,7 @@ style: function (feature) {
 			group: 'OSM',
 			title: 'Amb nom (relació)',
 			query: '(relation["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'base/line.gif',
+			iconSrc:  imgSrc + 'base/line.png',
 			iconStyle: 'background-color:rgba(255,0,0,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
@@ -346,7 +346,7 @@ style: function (feature) {
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba(255,0,0,0.4)'
+					color: 'rgba( 69, 179, 157 ,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
 					color: 'rgba( 69, 179, 157 ,1)',
