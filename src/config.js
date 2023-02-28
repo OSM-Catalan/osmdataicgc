@@ -340,16 +340,16 @@ style: function (feature) {
 			title: 'Nomenclàtor major 2020',
 geojson:  imgSrc + 'json/nomenclator_major_2020.json',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba( 69, 179, 157 ,0.4)',
+			iconStyle: 'background-color:rgba( 0, 0, 255 ,0.4)',
 style: function (feature) {
 				var key_regex = /^Topònim$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
 				var name = feature.get(name_key) || '';
 				var fill = new ol.style.Fill({
-					color: 'rgba( 69, 179, 157 ,0.4)'
+					color: 'rgba( 0, 0, 255,0.4)'
 				});
 				var stroke = new ol.style.Stroke({
-					color: 'rgba( 69, 179, 157 ,1)',
+					color: 'rgba(0, 0, 255  ,1)',
 					width: 1
 				});
 				var style = new ol.style.Style({
