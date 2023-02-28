@@ -192,7 +192,7 @@ var config = {
 			title: 'Límits municipals',
 			query: '(relation["admin_level"="8"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconStyle: 'background-color:rgba(255, 0, 0,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -229,7 +229,7 @@ style: function (feature) {
 			title: 'Amb nom (node)',
 			query: '(node["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
 			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconStyle: 'background-color:rgba(255,0,0,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -265,8 +265,8 @@ style: function (feature) {
 			group: 'OSM',
 			title: 'Amb nom (via)',
 			query: '(way["name"]({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconSrc:  imgSrc + 'base/line.gif',
+			iconStyle: 'background-color:rgba(255,0,0,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
@@ -302,8 +302,8 @@ style: function (feature) {
 			group: 'OSM',
 			title: 'Amb nom (relació)',
 			query: '(relation["name"]({{bbox}});way(r)({{bbox}});node(w););out meta;',
-			iconSrc:  imgSrc + 'base/circle.svg',
-			iconStyle: 'background-color:rgba(255,255,255,0.4)',
+			iconSrc:  imgSrc + 'base/line.gif',
+			iconStyle: 'background-color:rgba(255,0,0,0.4)',
 style: function (feature) {
 				var key_regex = /^name$/
 				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
