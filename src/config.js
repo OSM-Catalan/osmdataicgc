@@ -563,7 +563,7 @@ style: function (feature) {
 			
 		{	
 			group: 'ICGC',
-			title: 'Estat 3',
+			title: 'Estat 3 (oficial aprovat x CDT)',
 geojson:  imgSrc + 'json/municipis_icgc_estat3.json',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 69, 179, 157 ,0.4)',
@@ -600,7 +600,7 @@ style: function (feature) {
 			
 		{	
 			group: 'ICGC',
-			title: 'Estat 2',
+			title: 'Estat 2 (oficial no aprovat x CDT)',
 geojson:  imgSrc + 'json/municipis_icgc_estat2.json',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 241, 148, 138 ,0.4)',
@@ -637,7 +637,7 @@ style: function (feature) {
 			
 		{	
 			group: 'ICGC',
-			title: 'Estat 1',
+			title: 'Estat 1 (pendent)',
 geojson:  imgSrc + 'json/municipis_icgc_estat1.json',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 165, 105, 189 ,0.4)',
@@ -674,7 +674,7 @@ style: function (feature) {
 			
 		{	
 			group: 'ICGC',
-			title: 'Estat 0',
+			title: 'Estat 0 (no oficial-no replantejament)',
 geojson:  imgSrc + 'json/municipis_icgc_estat0.json',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(245, 176, 65,0.4)',
