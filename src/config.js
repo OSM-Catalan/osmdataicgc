@@ -338,7 +338,7 @@ style: function (feature) {
 		{	
 			group: 'ICGC',
 			title: 'Nomenclàtor major 2020',
-geojson:  imgSrc + 'json/nomenclator_major_2020.json',
+geojson:  imgSrc + 'json/nomenclator_major_2020.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 0, 0, 255 ,0.4)',
 style: function (feature) {
@@ -375,7 +375,7 @@ style: function (feature) {
 		{	
 			group: 'Altres entitats',
 			title: 'Límits municipals IGN',
-geojson:  imgSrc + 'json/municipis_ign.json',
+geojson:  imgSrc + 'json/municipis_ign.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(34, 59, 153 ,0.4)',
 style: function (feature) {
@@ -564,7 +564,7 @@ style: function (feature) {
 		{	
 			group: 'ICGC',
 			title: 'Estat 3 (oficial aprovat x CDT)',
-geojson:  imgSrc + 'json/municipis_icgc_estat3.json',
+geojson:  imgSrc + 'json/municipis_icgc_estat3.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 69, 179, 157 ,0.4)',
 style: function (feature) {
@@ -601,7 +601,7 @@ style: function (feature) {
 		{	
 			group: 'ICGC',
 			title: 'Estat 2 (oficial no aprovat x CDT)',
-geojson:  imgSrc + 'json/municipis_icgc_estat2.json',
+geojson:  imgSrc + 'json/municipis_icgc_estat2.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 241, 148, 138 ,0.4)',
 style: function (feature) {
@@ -638,7 +638,7 @@ style: function (feature) {
 		{	
 			group: 'ICGC',
 			title: 'Estat 1 (pendent)',
-geojson:  imgSrc + 'json/municipis_icgc_estat1.json',
+geojson:  imgSrc + 'json/municipis_icgc_estat1.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba( 165, 105, 189 ,0.4)',
 style: function (feature) {
@@ -675,7 +675,7 @@ style: function (feature) {
 		{	
 			group: 'ICGC',
 			title: 'Estat 0 (no oficial-no replantejament)',
-geojson:  imgSrc + 'json/municipis_icgc_estat0.json',
+geojson:  imgSrc + 'json/municipis_icgc_estat0.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(245, 176, 65,0.4)',
 style: function (feature) {
