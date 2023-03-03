@@ -202,6 +202,7 @@ style: function (feature) {
 				});
 				var stroke = new ol.style.Stroke({
 					color: 'rgba(255,0,0,1)',
+					lineDash: 3,
 					width: 1
 				});
 				var style = new ol.style.Style({
