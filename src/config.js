@@ -375,7 +375,44 @@ style: function (feature) {
 			
 		{	
 			group: 'Altres entitats',
-			title: 'Límits municipals IGN',
+			title: 'Límits municipals IGN 2023',
+geojson:  imgSrc + 'json/municipis_ign_2023.geojson',
+			iconSrc:  imgSrc + 'base/circle.svg',
+			iconStyle: 'background-color:rgba(106, 90, 205,0.4)',
+style: function (feature) {
+				var key_regex = /^NAME_BOUND$/
+				var name_key = feature.getKeys().filter(function(t){return t.match(key_regex)}).pop() || "name"
+				var name = feature.get(name_key) || '';
+				var fill = new ol.style.Fill({
+					color: 'rgba(106, 90, 205,0.4)'
+				});
+				var stroke = new ol.style.Stroke({
+					color: 'rgba(106, 90, 205 ,1)',
+					width: 1
+				});
+				var style = new ol.style.Style({
+					image: new ol.style.Icon({
+							src: imgSrc + 'base/circle.svg',
+							scale:0.03
+						}),
+							text: new ol.style.Text({
+								text: name,
+								offsetX : 7,
+								offsetY : -12,
+								fill: new ol.style.Fill({
+                            color: 'rgba(0,0,0,1)'
+                        }),
+						}),
+					fill: fill,
+					stroke: stroke
+				});
+				return style;
+			}
+				},
+			
+		{	
+			group: 'Altres entitats',
+			title: 'Límits municipals IGN Anteriors',
 geojson:  imgSrc + 'json/municipis_ign.geojson',
 			iconSrc:  imgSrc + 'base/circle.svg',
 			iconStyle: 'background-color:rgba(34, 59, 153 ,0.4)',
